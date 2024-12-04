@@ -113,3 +113,64 @@ button:hover {
     position: relative;
     z-index: 5;
 }
+
+/* Image Styling */
+.city-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image fills the container */
+    object-position: center center; /* Keep the image centered */
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover Effect for Image */
+.city-image img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    #cityInput {
+        width: 80%;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .weather-data {
+        font-size: 16px;
+    }
+
+    /* Ensure image does not exceed screen width */
+    .city-image img {
+        height: 200px; /* Adjust image height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mobile Screens */
+    .city-image img {
+        height: 150px; /* Smaller image height for mobile */
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .weather-data {
+        font-size: 14px;
+    }
+}
