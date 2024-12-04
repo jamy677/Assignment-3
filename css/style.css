@@ -16,3 +16,51 @@ body {
     margin: 0;
     overflow-x: hidden; /* Prevent horizontal overflow */
 }
+/* Main Container */
+.container {
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.8), rgba(40, 40, 40, 0.8));
+    border-radius: 16px;
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    max-height: 90vh; /* Limit container height to 90% of screen */
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+/* Header Styling */
+h1 {
+    font-size: 35px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Form Styling */
+#cityForm {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#cityInput {
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    width: 65%;
+    margin-right: 10px;
+    transition: all 0.3s ease-in-out;
+}
