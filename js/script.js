@@ -41,4 +41,23 @@ async function getWeather(city) {
          weatherInfo.innerHTML = "Error fetching weather data.";
      }
  }
+// Fetch City Image from Unsplash
+async function getCityImage(city) {
+    const unsplashUrl = `https://api.unsplash.com/search/photos?query=${city}&client_id=${unsplashApiKey}`;
+
+    try {
+        const response = await fetch(unsplashUrl);
+        const data = await response.json();
+        
+        if (data.results.length > 0) {
+            const imageUrl = data.results[0].urls.regular;
+            cityImage.innerHTML = `<img src="${imageUrl}" alt="Image of ${city}">`;
+        } else {
+            cityImage.innerHTML = "Image not found.";
+        }
+    } catch (error) {
+        console.error(error);
+        cityImage.innerHTML = "Error fetching city image.";
+    }
+}
  
