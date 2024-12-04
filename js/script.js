@@ -60,4 +60,15 @@ async function getCityImage(city) {
         cityImage.innerHTML = "Error fetching city image.";
     }
 }
- 
+
+// Event Listener for form submission
+cityForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const city = cityInput.value.trim();
+    if (city) {
+        getWeather(city);
+    } else {
+        weatherInfo.innerHTML = "Please enter a city.";
+        cityImage.innerHTML = "";
+    }
+});
